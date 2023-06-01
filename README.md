@@ -1,4 +1,3 @@
-![image](https://github.com/alizeinali70/Record-Book-MVVM/assets/9497988/61264509-ec80-4230-8fc2-836158609bb3)
 
 # Record Book MVVM Project
 This is very simple WPF - MVVM project that save Some Records and show them.

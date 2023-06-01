@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Record_Book_MVVM.Views"
         mc:Ignorable="d"
-        Title="Main" Height="650" Width="1000"
-        WindowStartupLocation="CenterScreen">
+        Title="Main" Height="650" Width="450"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    
     <Grid Background="#F5F5F5">
         <Grid Background="White" Grid.Row="1" Margin="5,5,5,5" >
-            <TextBox x:Name="FilterTextBox" TextChanged="FilterTextBox_TextChanged" Height="30" Width="200" Margin="25" 
+            <Label Content="Search :" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60"/>
+            <TextBox x:Name="FilterTextBox" TextChanged="FilterTextBox_TextChanged" Height="30" Width="200" Margin="75,25" 
                      VerticalAlignment="Top"  HorizontalAlignment="left" BorderThickness="1" BorderBrush="#E0E0E0" />
             <Button Height="30" Command="{Binding ShowWindowCommand}" Content="Add User" Width="100"
                     VerticalContentAlignment="Center" Padding="5" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Right" 

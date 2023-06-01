@@ -27,9 +27,12 @@ namespace Record_Book_MVVM.Views
 
         private bool FiltherMethod(object obj)
         {
-            var user=obj as User;
-            
-            return user.Name.Contains(FilterTextBox.Text);
+            var user = (User)obj;            
+            bool Res= user.Name.Contains(FilterTextBox.Text.ToLower());
+            if (Res)            
+                return user.Name.Contains(FilterTextBox.Text);            
+            else
+                return user.Name.Contains(FilterTextBox.Text.ToUpper());
         }
     }
 }
