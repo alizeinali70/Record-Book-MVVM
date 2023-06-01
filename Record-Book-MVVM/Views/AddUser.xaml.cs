@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Record_Book_MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Change_Button_Color.Views
+namespace Record_Book_MVVM.Views
 {
     /// <summary>
     /// Interaction logic for AddUser.xaml
@@ -22,6 +23,8 @@ namespace Change_Button_Color.Views
         public AddUser()
         {
             InitializeComponent();
+            AddUserViewModel addUserViewModel = new AddUserViewModel();
+            this.DataContext = addUserViewModel;
         }
     }
 }

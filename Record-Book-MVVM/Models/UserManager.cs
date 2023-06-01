@@ -12,7 +12,7 @@ namespace Record_Book_MVVM.Models
         public UserManager() { }
         public static ObservableCollection<User> _DatabaseUsers = new ObservableCollection<User>()
         {
-            new User(){Name="Ali", Email="azeinali@insys-test.de"}
+            new User(){Name="Ali", Email="azeinali@gmail.com"}
         };
 
         public static ObservableCollection<User> _GetUsers()

@@ -10,19 +10,21 @@ namespace Record_Book_MVVM.Commands
     public class RelayCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
-        public Action<object> _Execute { get; set; } // Returns Void
-        public Predicate<object> _CanExecute { get; set; } //returns Boolean
-        public RelayCommand() { 
-        
+        private Action<object> _Execute { get; set; } // Returns Void
+        private Predicate<object> _CanExecute { get; set; } //returns Boolean
+        public RelayCommand(Action<object> executeMethod, Predicate<object> CanEcecuteMethod)
+        { 
+            _Execute = executeMethod;
+            _CanExecute = CanEcecuteMethod;
         }
         public bool CanExecute(object parameter)
         {
-            throw new NotImplementedException();
+            return _CanExecute(parameter);
         }
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+            _Execute(parameter);
         }
     }
 }
